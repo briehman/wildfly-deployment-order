@@ -1,0 +1,14 @@
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+    <sub-deployment name="webapp-one-1.0-SNAPSHOT.war">
+    </sub-deployment>
+    <sub-deployment name="webapp-two-1.0-SNAPSHOT.war">
+        <dependencies>
+            <module name="deployment.wildfly-deployment-order.ear.webapp-one-1.0-SNAPSHOT.war" />
+        </dependencies>
+    </sub-deployment>
+    <sub-deployment name="webapp-three-1.0-SNAPSHOT.war">
+        <dependencies>
+            <module name="deployment.wildfly-deployment-order.ear.webapp-two-1.0-SNAPSHOT.war" />
+        </dependencies>
+    </sub-deployment>
+</jboss-deployment-structure>
